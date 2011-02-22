@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="PizzaPalace.Tests.Unit.dll" total="18" failures="0" not-run="0" date="2010-12-31" time="13:52:16">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.4206" os-version="Microsoft Windows NT 6.0.6002 Service Pack 2" platform="Win32NT" cwd="C:\projects\PizzaPalace\Build\bin" machine-name="ADAM-HOME" user="Administrator" user-domain="ADAM-HOME" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="PizzaPalace.Tests.Unit.dll" success="True" time="0.216" asserts="0">
+    <results>
+      <test-suite name="Tests" success="True" time="0.207" asserts="0">
+        <results>
+          <test-suite name="Unit" success="True" time="0.206" asserts="0">
+            <results>
+              <test-suite name="FormatExtensionTests" success="True" time="0.080" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.FormatExtensionTests.VerifyDescriptionFormatWithLowercaseToppings" executed="True" success="True" time="0.060" asserts="1" />
+                  <test-case name="Tests.Unit.FormatExtensionTests.VerifyDescriptionFormatWithPizzaCount" executed="True" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="OrderItemTests" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.OrderItemTests.VerifyNewOrderItem" executed="True" success="True" time="0.007" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite name="OrderTests" success="True" time="0.014" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.OrderTests.VerifyNewOrder" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="Tests.Unit.OrderTests.VerifyOrderSubTotal" executed="True" success="True" time="0.003" asserts="1" />
+                  <test-case name="Tests.Unit.OrderTests.VerifyOrderTaxes" executed="True" success="True" time="0.005" asserts="1" />
+                  <test-case name="Tests.Unit.OrderTests.VerifyOrderTotal" executed="True" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="ParseExtensionTests" success="True" time="0.018" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseNumberOfPizzasWithoutPizzaCount" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseNumberOfPizzasWithPizzaCount" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseOneTopping" executed="True" success="True" time="0.003" asserts="2" />
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseSizeWithoutPizzaCount" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseSizeWithoutPizzaCountAndMessedUpSize" executed="True" success="True" time="0.007" asserts="1" />
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseSizeWithPizzaCount" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="Tests.Unit.ParseExtensionTests.VerifyParseThreeToppings" executed="True" success="True" time="0.001" asserts="5" />
+                </results>
+              </test-suite>
+              <test-suite name="PriceEngineTests" success="True" time="0.027" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.PriceEngineTests.VerifyExceptionOnInvalidTopping" executed="True" success="True" time="0.023" asserts="0" />
+                  <test-case name="Tests.Unit.PriceEngineTests.VerifyPriceCalculations" executed="True" success="True" time="0.002" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="PrintExtensionTests" success="True" time="0.017" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.PrintExtensionTests.VerifyOrderItemFormat" executed="True" success="True" time="0.016" asserts="5" />
+                </results>
+              </test-suite>
+              <test-suite name="TaxEngineTests" success="True" time="0.008" asserts="0">
+                <results>
+                  <test-case name="Tests.Unit.TaxEngineTests.VerifyAddTax" executed="True" success="True" time="0.008" asserts="4" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<project name="PizzaPalace" default="all">
+
+  <property name="nant.settings.currentframework" value="net-3.5" />	
+  
+  <target name="all" depends="compile test"/>
+
+  <target name="clean" description="removes all generated build products">
+    <delete>
+      <fileset>
+        <include name="..\Final-Assemblies\*.*" />
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="compile" description="compiles the library DLLs used by the application" depends="clean">
+    <csc target="library" output="..\Final-Assemblies\PizzaPalace.dll" debug="false" warninglevel="0" >
+      <sources>
+        <include name="..\Source\PizzaPalace\**\*.cs"/>
+        <exclude name="..\Source\PizzaPalace\PizzaApplication.cs"/>
+      </sources>
+    </csc>
+    <csc target="exe" output="..\Final-Assemblies\PizzaPalace.exe" debug="false" warninglevel="0" >
+      <sources>
+        <include name="..\Source\PizzaPalace\**\*.cs"/>
+      </sources>
+    </csc>
+
+  </target>
+
+  <target name="test.prepare" description="prepares the test folder to execute tests - this is shared by the test and test.ncover targets" >
+    <delete>
+      <fileset>
+        <include name="bin\*.*" />
+      </fileset>
+    </delete>
+    <copy todir="bin" flatten="true">
+      <fileset basedir="..\Dependencies">
+        <include name="\**\*.dll" />
+      </fileset>
+    </copy>
+    <copy todir="bin" flatten="true">
+      <fileset basedir="..\Final-Assemblies">
+        <include name="*.dll" />
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="test.compile" description="compiles the unit tests" depends="compile test.prepare">
+    <csc target="library" output="bin\${project::get-name()}.Tests.Unit.dll" debug="false">
+      <references>
+        <include name="..\Final-Assemblies\*.dll" />
+        <include name="..\Dependencies\nunit\bin\*.dll" />
+      </references>
+      <sources>
+        <include name="..\Source\Tests.Unit\**\*.cs" />
+      </sources>
+    </csc>
+  </target>
+  
+  <target name="test" description="runs the unit tests" depends="test.compile">
+    <echo message="Executing unit tests..."/>
+    <exec basedir="..\Dependencies\nunit\bin"
+      workingdir="bin"
+      program="nunit-console.exe"
+      commandline="${project::get-name()}.Tests.Unit.dll /xml=${project::get-name()}.Tests.Unit.Results.xml" />	
+  </target>
+
+</project>

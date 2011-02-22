@@ -1,0 +1,48 @@
+Solution to Cortex's Pizza Palace programming problem by Adam Kahtava
+
+To run the solution use the PizzaPalace.exe found in Final-Assemblies directory
+
+To build the solution run the build.bat file found in the Build directory
+
+Thanks!
+
+-Adam
+
+Sample input / output:
+
+    PS C:\PizzaPalace\Final-Assemblies> .\PizzaPalace.exe
+    
+    Place your pizza order (or press the Enter key to stop):
+    Large - Pepperoni, Cheese,
+    Medium - Pepperoni, Cheese
+    Small - Pepperoni, Cheese
+    
+    1 Large, Two Topping Pizza - Pepperoni and Cheese: $18.00
+    1 Medium, Two Topping Pizza - Pepperoni and Cheese: $15.50
+    1 Small, Two Topping Pizza - Pepperoni and Cheese: $13.00
+    
+    Subtotal: $46.50
+    GST: $2.33
+    Total: $48.83
+    
+    PS C:\PizzaPalace\Final-Assemblies>
+
+Sample input / output:
+
+    PS C:\PizzaPalace\Final-Assemblies> .\PizzaPalace.exe
+    
+    Place your pizza order (or press the Enter key to stop):
+    9 large - Whale Cubes
+    
+    Invalid input, enter orders in the form of: number size - toppings, toppings, ...
+    Example: 2 Large - Ham, Cheese, Sausage
+    
+    9 large - Feta Cheese
+    
+    9 Large, One Topping Pizza - Feta Cheese: $180.00
+    
+    Subtotal: $180.00
+    GST: $9.01
+    Total: $189.01
+    
+    PS C:\PizzaPalace\Final-Assemblies>
