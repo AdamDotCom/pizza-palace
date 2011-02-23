@@ -1,4 +1,4 @@
-Solution to Cortex's Pizza Palace programming problem by Adam Kahtava
+Solution to a Pizza Palace programming problem
 
 To run the solution use the PizzaPalace.exe found in Final-Assemblies directory
 
@@ -7,6 +7,8 @@ To build the solution run the build.bat file found in the Build directory
 Thanks!
 
 -Adam
+
+==================
 
 Sample input / output:
 
